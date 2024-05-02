@@ -45,9 +45,11 @@ function totalPayment() {
     const taxAmountTD = document.getElementById("taxAmountTD");
     const totalDueTD = document.getElementById("totalDueTD");
 
-    const oneScoopIceCream = 2.25;
-    const toppingsCheckbox = document.getElementById("toppingsCheckbox");
+    let oneScoopIceCream = 2.25;
 
+    if(numberOfScoop > 1) {
+        oneScoopIceCream += 1.25 * (numberOfScoop-1);
+    }
 
     
 
@@ -65,10 +67,19 @@ function totalPayment() {
         if(cherryCheckbox){
             toppingsTotal += .25;
         }
-    } 
+    } else {
+        toppingsTotal = 0;
+    }
     
-    basePriceTD.innerText = (oneScoopIceCream * numberOfScoop) + toppingsTotal;
+    let basePrice = oneScoopIceCream + toppingsTotal;
+    basePriceTD.innerText = basePrice;
 
+    let taxAmount = basePrice * .08;
 
+    taxAmountTD.innerText = taxAmount;
+
+    let totalDue = taxAmount + basePrice;
+
+    totalDueTD.innerText = totalDue;
 
 }
