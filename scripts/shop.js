@@ -8,14 +8,9 @@ window.onload = function init() {
     const toppingsCheckbox = document.getElementById("toppingsCheckbox");
 
 
-   /*  if(cupOption) {
-        toppingsCheckbox.style.display = "block";
-    } else {
-        toppingsCheckbox.style.display = "none";
-    } */
 
-    cupOption.change = totalPayment;
-    coneOption.change = totalPayment;
+    submitOrderBtn.onclick = totalPayment;
+    
     
 
 }
@@ -41,7 +36,6 @@ function totalPayment() {
 
     toppingsTotal = 0;
     if(cupOption) {
-        toppingsCheckbox.style.display = "block";
 
         if(sprinklesCheckbox) {
             toppingsTotal += .50;
@@ -56,10 +50,8 @@ function totalPayment() {
             toppingsTotal += .25;
         }
     } else {
-        toppingsCheckbox.style.display = "none";
-
     }
-    basePriceTD.innerText = (oneScoopIceCream * numberOfScoop) * toppingsTotal;
+    basePriceTD.innerText = (oneScoopIceCream * numberOfScoop) + toppingsTotal;
 
 
 
