@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Centered viewport -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="">Number of scoops</label>
+        <input type="number" id="numberOfScoopInput" min="1" max="4"/>
+
+        <fieldset>
+          <input type="radio" name="coneAndCup" id="coneOption" />
+          <label for="coneOption">Cone</label>
+          <input type="radio" name="coneAndCup" id="cupOption" />
+          <label for="cupOption">Cup</label>
+        </fieldset>
+        
+        <fieldset id="toppingsCheckbox">
+            <legend>Toppings</legend>
+            <input type="checkbox" id="sprinklesCheckbox">
+            <label for="sprinklesCheckbox">Sprinkles ($.50)</label>
+            <input type="checkbox" id="whipedCreamCheckbox">
+            <label for="whipedCreamCheckbox">Whiped Cream ($.25)</label> <br><br>
+            <input type="checkbox" id="hotFudgeCheckbox">
+            <label for="hotFudgeCheckbox">Hot Fudge($1.25)</label>
+            <input type="checkbox" id="cherryCheckbox">
+            <label for="cherryCheckbox">Hot Fudge($0.25)</label>
+        </fieldset>
+
+        <button type="button" id="submitOrderBtn">Submit Order</button>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Base Price: </td>
+                    <td>$xx.xx</td>
+                </tr>
+                <tr>
+                    <td>Tax: </td>
+                    <td>$xx.xx</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total Due: </td>
+                    <td>$xx.xx</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+      </form>
+    </main>
+
+    <script src=""></script>
+    <script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
+  </body>
+</html>
